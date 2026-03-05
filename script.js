@@ -20,7 +20,7 @@ const campos = [nome,email,senha,confirmarSenha,idade]
 
 campos.forEach(campo => campo.classList.remove("erro"))
 
-if(nome.value.length < 3){
+if(nome.value.length < 10){
 
 nome.classList.add("erro")
 valido = false
@@ -28,6 +28,13 @@ valido = false
 }
 
 if(!email.value.includes("@")){
+
+email.classList.add("erro")
+valido = false
+
+}
+
+if(!email.value.includes(".")){
 
 email.classList.add("erro")
 valido = false
