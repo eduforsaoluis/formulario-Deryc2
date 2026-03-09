@@ -51,6 +51,8 @@ valido = false
 if(senha.value !== confirmarSenha.value){
 
 confirmarSenha.classList.add("erro")
+mensagem.textContent = "As senhas não coincidem."
+mensagem.className = "erro-msg"
 valido = false
 
 }
@@ -67,7 +69,7 @@ if(valido){
 mensagem.textContent = "Cadastro realizado com sucesso!"
 mensagem.className = "sucesso"
 
-}else{
+}else if(mensagem.textContent === ""){
 
 mensagem.textContent = "Corrija os campos destacados."
 mensagem.className = "erro-msg"
